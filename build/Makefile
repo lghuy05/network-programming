@@ -168,6 +168,19 @@ bind_demo/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bind_demo.dir/build.make CMakeFiles/bind_demo.dir/build
 .PHONY : bind_demo/fast
 
+#=============================================================================
+# Target rules for targets named listen_demo
+
+# Build rule for target.
+listen_demo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 listen_demo
+.PHONY : listen_demo
+
+# fast build rule for target.
+listen_demo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/listen_demo.dir/build.make CMakeFiles/listen_demo.dir/build
+.PHONY : listen_demo/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -239,6 +252,30 @@ src/file.s: src/file.cpp.s
 src/file.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/file.cpp.s
 .PHONY : src/file.cpp.s
+
+src/listen_demo.o: src/listen_demo.cpp.o
+.PHONY : src/listen_demo.o
+
+# target to build an object file
+src/listen_demo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/listen_demo.dir/build.make CMakeFiles/listen_demo.dir/src/listen_demo.cpp.o
+.PHONY : src/listen_demo.cpp.o
+
+src/listen_demo.i: src/listen_demo.cpp.i
+.PHONY : src/listen_demo.i
+
+# target to preprocess a source file
+src/listen_demo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/listen_demo.dir/build.make CMakeFiles/listen_demo.dir/src/listen_demo.cpp.i
+.PHONY : src/listen_demo.cpp.i
+
+src/listen_demo.s: src/listen_demo.cpp.s
+.PHONY : src/listen_demo.s
+
+# target to generate assembly for a file
+src/listen_demo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/listen_demo.dir/build.make CMakeFiles/listen_demo.dir/src/listen_demo.cpp.s
+.PHONY : src/listen_demo.cpp.s
 
 src/logger.o: src/logger.cpp.o
 .PHONY : src/logger.o
@@ -322,6 +359,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... app"
 	@echo "... bind_demo"
+	@echo "... listen_demo"
 	@echo "... socket_demo"
 	@echo "... sys_call"
 	@echo "... main.o"
@@ -333,6 +371,9 @@ help:
 	@echo "... src/file.o"
 	@echo "... src/file.i"
 	@echo "... src/file.s"
+	@echo "... src/listen_demo.o"
+	@echo "... src/listen_demo.i"
+	@echo "... src/listen_demo.s"
 	@echo "... src/logger.o"
 	@echo "... src/logger.i"
 	@echo "... src/logger.s"
