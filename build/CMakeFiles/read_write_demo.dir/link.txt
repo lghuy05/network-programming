@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/read_write_demo.dir/link.d CMakeFiles/read_write_demo.dir/src/read_write_demo.cpp.o -o read_write_demo

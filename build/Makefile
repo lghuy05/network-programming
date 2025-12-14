@@ -181,6 +181,19 @@ listen_demo/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/listen_demo.dir/build.make CMakeFiles/listen_demo.dir/build
 .PHONY : listen_demo/fast
 
+#=============================================================================
+# Target rules for targets named read_write_demo
+
+# Build rule for target.
+read_write_demo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 read_write_demo
+.PHONY : read_write_demo
+
+# fast build rule for target.
+read_write_demo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_write_demo.dir/build.make CMakeFiles/read_write_demo.dir/build
+.PHONY : read_write_demo/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -301,6 +314,30 @@ src/logger.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/logger.cpp.s
 .PHONY : src/logger.cpp.s
 
+src/read_write_demo.o: src/read_write_demo.cpp.o
+.PHONY : src/read_write_demo.o
+
+# target to build an object file
+src/read_write_demo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_write_demo.dir/build.make CMakeFiles/read_write_demo.dir/src/read_write_demo.cpp.o
+.PHONY : src/read_write_demo.cpp.o
+
+src/read_write_demo.i: src/read_write_demo.cpp.i
+.PHONY : src/read_write_demo.i
+
+# target to preprocess a source file
+src/read_write_demo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_write_demo.dir/build.make CMakeFiles/read_write_demo.dir/src/read_write_demo.cpp.i
+.PHONY : src/read_write_demo.cpp.i
+
+src/read_write_demo.s: src/read_write_demo.cpp.s
+.PHONY : src/read_write_demo.s
+
+# target to generate assembly for a file
+src/read_write_demo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_write_demo.dir/build.make CMakeFiles/read_write_demo.dir/src/read_write_demo.cpp.s
+.PHONY : src/read_write_demo.cpp.s
+
 src/socket_demo.o: src/socket_demo.cpp.o
 .PHONY : src/socket_demo.o
 
@@ -360,6 +397,7 @@ help:
 	@echo "... app"
 	@echo "... bind_demo"
 	@echo "... listen_demo"
+	@echo "... read_write_demo"
 	@echo "... socket_demo"
 	@echo "... sys_call"
 	@echo "... main.o"
@@ -377,6 +415,9 @@ help:
 	@echo "... src/logger.o"
 	@echo "... src/logger.i"
 	@echo "... src/logger.s"
+	@echo "... src/read_write_demo.o"
+	@echo "... src/read_write_demo.i"
+	@echo "... src/read_write_demo.s"
 	@echo "... src/socket_demo.o"
 	@echo "... src/socket_demo.i"
 	@echo "... src/socket_demo.s"

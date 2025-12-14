@@ -59,4 +59,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/socket_demo.dir/DependInfo.cmake"
   "CMakeFiles/bind_demo.dir/DependInfo.cmake"
   "CMakeFiles/listen_demo.dir/DependInfo.cmake"
+  "CMakeFiles/read_write_demo.dir/DependInfo.cmake"
   )

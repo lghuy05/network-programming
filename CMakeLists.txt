@@ -19,3 +19,4 @@ add_executable(sys_call
 add_executable(socket_demo src/socket_demo.cpp)
 add_executable(bind_demo src/bind_demo.cpp)
 add_executable(listen_demo src/listen_demo.cpp)
+add_executable(read_write_demo src/read_write_demo.cpp)

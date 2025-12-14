@@ -3,5 +3,6 @@
 /home/yui/cs/c++/realc++production/build/CMakeFiles/socket_demo.dir
 /home/yui/cs/c++/realc++production/build/CMakeFiles/bind_demo.dir
 /home/yui/cs/c++/realc++production/build/CMakeFiles/listen_demo.dir
+/home/yui/cs/c++/realc++production/build/CMakeFiles/read_write_demo.dir
 /home/yui/cs/c++/realc++production/build/CMakeFiles/edit_cache.dir
 /home/yui/cs/c++/realc++production/build/CMakeFiles/rebuild_cache.dir
