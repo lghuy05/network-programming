@@ -40,7 +40,11 @@ int main() {
     buffer[byte_read] = '\0';
     std::cout << "Received:\n" << buffer << std::endl;
   }
-  const char *response = "hello fromn server\n";
+  const char *response = "HTTP/1.1 200 OK\r\n"
+                         "Content-Type: text/plain\r\n"
+                         "Content-Length: 18\r\n"
+                         "\r\n"
+                         "hello from server\n";
   write(client_fd, response, strlen(response));
   close(client_fd);
   close(listen_fd);
