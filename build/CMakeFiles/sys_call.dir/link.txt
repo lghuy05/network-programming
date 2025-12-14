@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/sys_call.dir/link.d CMakeFiles/sys_call.dir/src/syscall_demo.cpp.o -o sys_call

@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/yui/cs/c++/realc++production/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

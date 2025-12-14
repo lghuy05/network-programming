@@ -1,0 +1,3 @@
+STDIN fd: 0
+STDOUT fd: 1
+STDERR fd: 2
