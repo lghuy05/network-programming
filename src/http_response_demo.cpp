@@ -4,8 +4,21 @@
 #include <iostream>
 #include <netinet/in.h>
 #include <sstream>
+#include <string>
 #include <sys/socket.h>
 #include <unistd.h>
+
+std::string make_response(const std::string &body, int status = 200) {
+  std::string status_text = (status == 200) ? "OK" : "Not Found";
+  return "HTTP/1.1 " + std::to_string(status) + " " + status_text +
+         "\r\n"
+         "Content-Type: text/plain\r\n"
+         "Content-Length: " +
+         std::to_string(body.size()) +
+         "\r\n"
+         "\r\n" +
+         body;
+}
 
 int main() {
   int listen_fd = socket(AF_INET, SOCK_STREAM, 0);
@@ -60,18 +73,26 @@ int main() {
   std::istringstream iss(request_header);
   std::string method, path, version;
   iss >> method >> path >> version;
+  std::string body;
+  int status = 200;
 
-  std::cout << "Method: " << method << std::endl;
-  std::cout << "Path: " << path << std::endl;
-  std::cout << "Version: " << version << std::endl;
+  if (method == "GET" && path == "/") {
+    body = "hello from server";
+  } else if (method == "GET" && path == "/health") {
+    body = "OK";
+  } else {
+    body = "404 Not Found";
+    status = 404;
+  }
 
-  const char *response = "HTTP/1.1 200 OK\r\n"
-                         "Content-Type: text/plain\r\n"
-                         "Content_Length: 18\r\n"
-                         "\r\n"
-                         "hello from server\n";
-
-  write(client_fd, response, strlen(response));
+  std::string response = make_response(body, status);
+  // const char *response = "HTTP/1.1 200 OK\r\n"
+  //                        "Content-Type: text/plain\r\n"
+  //                        "Content_Length: 18\r\n"
+  //                        "\r\n"
+  //                        "hello from server\n";
+  //
+  write(client_fd, response.c_str(), response.size());
 
   close(client_fd);
   close(listen_fd);
