@@ -194,6 +194,19 @@ read_write_demo/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/read_write_demo.dir/build.make CMakeFiles/read_write_demo.dir/build
 .PHONY : read_write_demo/fast
 
+#=============================================================================
+# Target rules for targets named http_response_demo
+
+# Build rule for target.
+http_response_demo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 http_response_demo
+.PHONY : http_response_demo
+
+# fast build rule for target.
+http_response_demo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_response_demo.dir/build.make CMakeFiles/http_response_demo.dir/build
+.PHONY : http_response_demo/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -265,6 +278,30 @@ src/file.s: src/file.cpp.s
 src/file.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/file.cpp.s
 .PHONY : src/file.cpp.s
+
+src/http_response_demo.o: src/http_response_demo.cpp.o
+.PHONY : src/http_response_demo.o
+
+# target to build an object file
+src/http_response_demo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_response_demo.dir/build.make CMakeFiles/http_response_demo.dir/src/http_response_demo.cpp.o
+.PHONY : src/http_response_demo.cpp.o
+
+src/http_response_demo.i: src/http_response_demo.cpp.i
+.PHONY : src/http_response_demo.i
+
+# target to preprocess a source file
+src/http_response_demo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_response_demo.dir/build.make CMakeFiles/http_response_demo.dir/src/http_response_demo.cpp.i
+.PHONY : src/http_response_demo.cpp.i
+
+src/http_response_demo.s: src/http_response_demo.cpp.s
+.PHONY : src/http_response_demo.s
+
+# target to generate assembly for a file
+src/http_response_demo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_response_demo.dir/build.make CMakeFiles/http_response_demo.dir/src/http_response_demo.cpp.s
+.PHONY : src/http_response_demo.cpp.s
 
 src/listen_demo.o: src/listen_demo.cpp.o
 .PHONY : src/listen_demo.o
@@ -396,6 +433,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... app"
 	@echo "... bind_demo"
+	@echo "... http_response_demo"
 	@echo "... listen_demo"
 	@echo "... read_write_demo"
 	@echo "... socket_demo"
@@ -409,6 +447,9 @@ help:
 	@echo "... src/file.o"
 	@echo "... src/file.i"
 	@echo "... src/file.s"
+	@echo "... src/http_response_demo.o"
+	@echo "... src/http_response_demo.i"
+	@echo "... src/http_response_demo.s"
 	@echo "... src/listen_demo.o"
 	@echo "... src/listen_demo.i"
 	@echo "... src/listen_demo.s"
